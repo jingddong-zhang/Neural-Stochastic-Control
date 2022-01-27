@@ -1,0 +1,83 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import torch
+import pylustrator
+pylustrator.start()
+import seaborn as sns
+sns.set_theme(style="whitegrid")
+
+
+L1 = torch.load('./data/harmonic/loss_icnn.pt')[2:] # delete large first tow numbers
+L2 = torch.load('./data/harmonic/loss_quad.pt')
+L3 = torch.load('./data/harmonic/loss_AS.pt')
+
+
+plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.5, hspace=0.5)
+plt.subplot(231)
+plt.plot(np.arange(len(L1)),L1,'b')
+plt.ylim(-0.1,13)
+plt.title('ES+ICNN')
+plt.subplot(232)
+plt.plot(np.arange(len(L2)),L2,'b')
+plt.ylim(-0.1,13)
+plt.title('ES+Quad')
+plt.subplot(233)
+plt.plot(np.arange(len(L3)),L3,'b')
+plt.ylim(-0.1,13)
+plt.title('AS')
+plt.subplot(234)
+plt.plot(np.arange(len(L1)),L1,'b')
+plt.ylim(-0.1,1)
+plt.subplot(235)
+plt.plot(np.arange(len(L2)),L2,'b')
+plt.ylim(-0.1,1)
+plt.subplot(236)
+plt.plot(np.arange(len(L3)),L3,'b')
+plt.ylim(-0.1,1)
+
+#% start: automatic generated code from pylustrator
+plt.figure(1).ax_dict = {ax.get_label(): ax for ax in plt.figure(1).axes}
+import matplotlib as mpl
+plt.figure(1).set_size_inches(14.340000/2.54, 6.370000/2.54, forward=True)
+plt.figure(1).axes[0].set_xlim(-8.3, 174.3)
+plt.figure(1).axes[0].set_xticks([0.0, 50.0, 100.0, 150.0])
+plt.figure(1).axes[0].set_xticklabels(["0", "50", "100", "150"], fontsize=11.0, fontweight="normal", color=".15", fontstyle="normal", fontname="Arial", horizontalalignment="center")
+plt.figure(1).axes[0].grid(False)
+plt.figure(1).axes[0].set_position([0.095838, 0.201885, 0.255811, 0.697830])
+plt.figure(1).axes[0].get_xaxis().get_label().set_text("Iterations")
+plt.figure(1).axes[0].get_yaxis().get_label().set_text("Loss")
+plt.figure(1).axes[1].set_xlim(-7.75, 162.75)
+plt.figure(1).axes[1].set_xticks([0.0, 50.0, 100.0, 150.0])
+plt.figure(1).axes[1].set_xticklabels(["0", "50", "100", "150"], fontsize=11.0, fontweight="normal", color=".15", fontstyle="normal", fontname="Arial", horizontalalignment="center")
+plt.figure(1).axes[1].grid(False)
+plt.figure(1).axes[1].set_position([0.409361, 0.201885, 0.255811, 0.697830])
+plt.figure(1).axes[1].lines[0].set_color("#4c72b0")
+plt.figure(1).axes[1].lines[0].set_markeredgecolor("#4c72b0")
+plt.figure(1).axes[1].lines[0].set_markerfacecolor("#4c72b0")
+plt.figure(1).axes[1].get_xaxis().get_label().set_text("Iterations")
+plt.figure(1).axes[2].set_xlim(-9.200000000000001, 193.2)
+plt.figure(1).axes[2].set_xticks([0.0, 50.0, 100.0, 150.0])
+plt.figure(1).axes[2].set_xticklabels(["0", "50", "100", "150"], fontsize=11.0, fontweight="normal", color=".15", fontstyle="normal", fontname="Arial", horizontalalignment="center")
+plt.figure(1).axes[2].grid(False)
+plt.figure(1).axes[2].set_position([0.722885, 0.201885, 0.255811, 0.697830])
+plt.figure(1).axes[2].lines[0].set_color("#4c72b0")
+plt.figure(1).axes[2].lines[0].set_markeredgecolor("#4c72b0")
+plt.figure(1).axes[2].lines[0].set_markerfacecolor("#4c72b0")
+plt.figure(1).axes[2].get_xaxis().get_label().set_text("Iterations")
+plt.figure(1).axes[3].grid(False)
+plt.figure(1).axes[3].set_position([0.198784, 0.478804, 0.152863, 0.321584])
+plt.figure(1).axes[3].lines[0].set_color("#4c72b0")
+plt.figure(1).axes[3].lines[0].set_markeredgecolor("#4c72b0")
+plt.figure(1).axes[3].lines[0].set_markerfacecolor("#4c72b0")
+plt.figure(1).axes[4].grid(False)
+plt.figure(1).axes[4].set_position([0.512309, 0.478804, 0.152863, 0.321584])
+plt.figure(1).axes[4].lines[0].set_color("#4c72b0")
+plt.figure(1).axes[4].lines[0].set_markeredgecolor("#4c72b0")
+plt.figure(1).axes[4].lines[0].set_markerfacecolor("#4c72b0")
+plt.figure(1).axes[5].grid(False)
+plt.figure(1).axes[5].set_position([0.828954, 0.463271, 0.149744, 0.337116])
+plt.figure(1).axes[5].lines[0].set_color("#4c72b0")
+plt.figure(1).axes[5].lines[0].set_markeredgecolor("#4c72b0")
+plt.figure(1).axes[5].lines[0].set_markerfacecolor("#4c72b0")
+#% end: automatic generated code from pylustrator
+plt.show()
