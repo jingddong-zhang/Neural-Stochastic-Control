@@ -8,6 +8,7 @@ This repository contains the code for the paper: Neural Stochastic Control
 [pylustrator](https://pylustrator.readthedocs.io/en/latest/)
 ## How it works
 Each example consists of a learner of ES or/and AS and a generater. The learner minimizes the corresponding loss function to find optimal parameters in neural stochastic control function (and neural Lyapunov function). The generater sample trajectories under controlled SDEs and calculate corresponding indexes of control performance to check whether the trajectories are steered to targets. The data is provided in the [Google Drive](https://drive.google.com/file/d/1Reo_KysBPqjieAoyXEEgF3WTTtHVqr-S/view?usp=sharing).
+The data in code_rebuttal is provided in the [Google Drive](https://drive.google.com/file/d/1jM6TUyE8baZeAnxmkY14UMvswCbo9mvl/view?usp=sharing).
 ## A typical procedure is as follows:
 * Define the neural network with initial parameters for neural control function (and Lyapunov function) for AS(ES)
 * Define the controlled dynamics for physical system 
