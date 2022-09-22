@@ -17,4 +17,12 @@ The data in code_rebuttal is provided in the [Google Drive](https://drive.google
 * Plot the corresponding results (Run `plot.py`)
 
 
-
+## Citation
+```
+@article{zhang2022neural,  
+  title={Neural Stochastic Control},  
+  author={Zhang, Jingdong and Zhu, Qunxi and Lin, Wei},  
+  journal={arXiv preprint arXiv:2209.07240},  
+  year={2022}，  
+}
+```
