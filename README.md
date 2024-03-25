@@ -1,5 +1,5 @@
 # Neural-Stochastic-Control 
-This repository contains the code for the paper published in NeurIPS2022: Neural Stochastic Control
+This repository contains the code for the paper published in NeurIPS2022: [Neural Stochastic Control](https://proceedings.neurips.cc/paper_files/paper/2022/hash/3b91129cf07287aac3de7b8adba2196f-Abstract-Conference.html)
 ## Requirements
 [Pytorch 1.8.1](https://pytorch.org/get-started/locally/)
 
